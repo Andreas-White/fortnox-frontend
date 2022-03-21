@@ -1,0 +1,140 @@
+@primary: linear-gradient(90deg, green, white, green);
+@secondary: linear-gradient(90deg, yellow, white, yellow);
+
+body {
+  background: #dce7ce;
+  color: @secondary;
+  font-family: 'Acme', sans-serif;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  text-align: start;
+  flex-direction: column;
+  align-items: center;
+
+  .label-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 11rem;
+  }
+
+  label {
+    margin: 0.5rem;
+    font-weight: bold;
+  }
+
+  select {
+    width: 10.5rem;
+    height: 1.36rem;
+  }
+
+  .input-pointer {
+    cursor: pointer;
+  }
+}
+
+.save-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+
+  .save-button-inner-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 11rem;
+  }
+
+  button {
+    background: @primary;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+}
+
+.nav-bar {
+  background: @primary;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+
+  a {
+    padding: 0 2.5rem 0 0;
+    text-decoration: none;
+    font-weight: bold;
+    color: @secondary;
+    font-size: 1rem;
+  }
+
+  a:hover {
+    font-size: 1.1rem;
+  }
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+
+  table {
+    border-spacing: 0;
+  }
+
+  thead {
+    background: @primary;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  th,
+  td {
+    border: groove;
+    margin: 0;
+  }
+}
+
+.summary-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading-line::before {
+  margin: 0 auto;
+  content: '';
+  width: 10rem;
+  height: 0.1rem;
+  display: block;
+  background-color: rgb(252, 175, 9);
+}
+
+.heading-line::after {
+  margin: 0 auto;
+  padding-top: 0.5rem;
+  content: '';
+  width: 2rem;
+  height: 0.2rem;
+  display: block;
+  background-color: rgb(252, 175, 9);
+}

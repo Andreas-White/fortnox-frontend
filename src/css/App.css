@@ -1,0 +1,117 @@
+body {
+  background: #dce7ce;
+  color: linear-gradient(90deg, yellow, white, yellow);
+  font-family: 'Acme', sans-serif;
+}
+.input-container {
+  display: flex;
+  justify-content: center;
+  text-align: start;
+  flex-direction: column;
+  align-items: center;
+}
+.input-container .label-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 11rem;
+}
+.input-container label {
+  margin: 0.5rem;
+  font-weight: bold;
+}
+.input-container select {
+  width: 10.5rem;
+  height: 1.36rem;
+}
+.input-container .input-pointer {
+  cursor: pointer;
+}
+.save-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.save-button-container .save-button-inner-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 11rem;
+}
+.save-button-container button {
+  background: linear-gradient(90deg, green, white, green);
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.nav-bar {
+  background: linear-gradient(90deg, green, white, green);
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+.nav-bar a {
+  padding: 0 2.5rem 0 0;
+  text-decoration: none;
+  font-weight: bold;
+  color: linear-gradient(90deg, yellow, white, yellow);
+  font-size: 1rem;
+}
+.nav-bar a:hover {
+  font-size: 1.1rem;
+}
+.title-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+.table-container table {
+  border-spacing: 0;
+}
+.table-container thead {
+  background: linear-gradient(90deg, green, white, green);
+}
+.table-container th {
+  text-align: left;
+}
+.table-container th,
+.table-container td {
+  border: groove;
+  margin: 0;
+}
+.summary-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.home-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.heading-line::before {
+  margin: 0 auto;
+  content: '';
+  width: 10rem;
+  height: 0.1rem;
+  display: block;
+  background-color: #fcaf09;
+}
+.heading-line::after {
+  margin: 0 auto;
+  padding-top: 0.5rem;
+  content: '';
+  width: 2rem;
+  height: 0.2rem;
+  display: block;
+  background-color: #fcaf09;
+}
+/*# sourceMappingURL=App.css.map */
