@@ -1,15 +1,17 @@
 import { React, useState } from 'react'
 
 const List = () => {
-  const [boxName, setBoxName] = useState('')
-  const [boxWeight, setBoxWeight] = useState('')
-  const [boxColor, setBoxColor] = useState('#f6b73c')
-  const [boxCountry, setBoxCountry] = useState('Sweden')
+  const [box, setBox] = useState({
+    name: '',
+    weight: '',
+    color: '#f6b73c',
+    country: 'Sweden',
+  })
 
-  const onBoxName = (e) => setBoxName(e.target.value)
-  const onBoxWeight = (e) => setBoxWeight(e.target.value)
-  const onBoxColor = (e) => setBoxColor(e.target.value)
-  const onBoxCountry = (e) => setBoxCountry(e.target.value)
+  function onHandleChange(e) {
+    const { name, value } = e.target
+    setBox({ ...box, [name]: value })
+  }
 
   function validateBoxData(boxData) {
     if (boxData.name === '' || boxData.name === null) {
@@ -34,7 +36,7 @@ const List = () => {
     }
     if (boxData.weight < 0) {
       alert('Please provide a positive weight.')
-      setBoxWeight(0)
+      setBox((prev) => ({ ...prev, weight: 0 }))
       return false
     }
     if (checkBlueColor(boxData.color)) {
@@ -63,14 +65,9 @@ const List = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    let newWeight = parseFloat(boxWeight)
+    let newWeight = parseFloat(box.weight)
 
-    const data = {
-      name: boxName,
-      weight: newWeight,
-      color: boxColor,
-      country: boxCountry,
-    }
+    const data = { ...box, weight: newWeight }
     console.log(data)
 
     if (validateBoxData(data)) {
@@ -107,8 +104,8 @@ const List = () => {
           name="name"
           type="text"
           placeholder="Name"
-          value={boxName}
-          onChange={onBoxName}
+          value={box.name}
+          onChange={onHandleChange}
           required
         />
       </div>
@@ -120,8 +117,8 @@ const List = () => {
           name="weight"
           type="number"
           placeholder="Weight"
-          value={boxWeight}
-          onChange={onBoxWeight}
+          value={box.weight}
+          onChange={onHandleChange}
           required
         />
       </div>
@@ -133,8 +130,8 @@ const List = () => {
           className="input-pointer"
           name="color"
           type="color"
-          value={boxColor}
-          onChange={onBoxColor}
+          value={box.color}
+          onChange={onHandleChange}
           data-testid="input-color"
         />
       </div>
@@ -145,8 +142,8 @@ const List = () => {
         <select
           className="input-pointer"
           name="country"
-          value={boxCountry}
-          onChange={onBoxCountry}
+          value={box.country}
+          onChange={onHandleChange}
           required
         >
           <option value="Sweden">Sweden </option>

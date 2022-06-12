@@ -52,7 +52,7 @@ const List = () => {
           </thead>
           <tbody>
             {boxes &&
-              boxes.map((box, index) => (
+              boxes.map((box) => (
                 <tr key={box.id}>
                   <td>{box.name}</td>
                   <td>{box.weight} kilograms</td>

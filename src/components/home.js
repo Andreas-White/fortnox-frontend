@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 const Home = () => {
   return (
     <div className="home-container">
       <div className="heading-container">
-        <img src="fortnox.png" />
+        <img src="fortnox.png" alt="fortnox logo" />
       </div>
       <div class="heading-line"></div>
       <div className="text-container">
